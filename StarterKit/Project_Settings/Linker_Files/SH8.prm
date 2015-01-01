@@ -1,0 +1,37 @@
+/* This is a linker parameter file for the mc9s08sh8 */
+
+NAMES END /* CodeWarrior will pass all the needed files to the linker by command line. But here you may add your own files too. */
+
+SEGMENTS /* Se declaran los SEGMENTOS que el linker va a reconocer, es decir aqui defino mi mapa de memoria - o sea el hardware.
+		 	A continuacion viene el PLACEMENT de estos segmentos. Le decimos al LINKER cuales es el orden de carga */
+
+    Z_RAM                    =  READ_WRITE   0x0080 TO 0x00FF;	/* Declaro espacio de pag cero */
+    RAM                      =  READ_WRITE   0x0100 TO 0x012F;	/* ... la RAM convencional */
+	MY_STK 					 =  NO_INIT      0x0130 TO 0x027F;	/* ... y aca se define el segmento del stack */
+    ROM                      =  READ_ONLY    0xE000 TO 0xFFAD;
+ /* INTVECTS                 =  READ_ONLY    este segmento esta en realidad declarado como vectores - 99% no se usa */
+END
+
+PLACEMENT /* Los segmentos predefinidos en el apartado anterior SEGMENTS se usan en este orden de ubicacion */
+
+    DEFAULT_RAM,                INTO  RAM; /* non-zero page variables */
+
+    _PRESTART,                          /* startup code */
+    STARTUP,                            /* startup data structures */
+    ROM_VAR,                            /* constant variables */
+    STRINGS,                            /* string literals */
+    VIRTUAL_TABLE_SEGMENT,              /* C++ virtual table segment */
+    DEFAULT_ROM,
+    COPY                                /* copy down information: how to initialize variables */
+                                        INTO  ROM; 
+
+    _DATA_ZEROPAGE,                     /* zero page variables */
+    MY_ZEROPAGE                         INTO  Z_RAM;
+	SSTACK 								INTO  MY_STK;
+
+END
+
+//STACKSIZE 0x40		/* funciona pero es insuficiente para un printf */
+STACKTOP 0x027F
+
+//VECTOR 0 _Startup     /* Si se usa la tabla de vectores de la inicializacion automatica, coemntar esta linea */
