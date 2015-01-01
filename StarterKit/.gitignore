@@ -1,13 +1,6 @@
-.cproject
 .cwGeneratedFileSetLog
-.project
-.settings/
-ProcessorExpert.pe
-Project_Headers/
-Project_Settings/
 ReferencedRSESystems.xml
 SaAnalysispointsManager.apconfig
-Sources/
 StarterKit_FLASH_OSBDM.traceConfig
 FLASH
 .Analysis Data/
