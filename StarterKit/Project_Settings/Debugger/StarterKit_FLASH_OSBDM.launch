@@ -21,12 +21,12 @@
 <intAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.coreIndex" value="0"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.homogeneousMulticore" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.initPath" value=""/>
-<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.memConfigPath" value="${ProjDirPath}/Project_Settings/Debugger/MC9S08SH8.mem"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.memConfigPath" value=""/>
 <stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.simulator" value=""/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.smp" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.systemType" value="com.freescale.cw.system.hcs08.HCS08SH.MC9S08SH8"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useInitFile" value="false"/>
-<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useMemoryConfigFile" value="true"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.Embedded Initialization.useMemoryConfigFile" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.HC08 Debugger.processor" value="MC9S08SH8"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.HC08 Interrupt.interrupt_disabled" value="true"/>
 <listAttribute key="com.freescale.cdt.debug.cw.CoreNameList">
@@ -53,6 +53,7 @@
 <stringAttribute key="com.freescale.cdt.debug.cw.InitializePCAtSymbol" value="main"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.InitializePCAtUserSpecified" value="false"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.LaunchMode" value="DOWNLOAD"/>
+<booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtExit" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtProgramEntryPoint" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtStartUp" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.PN_StopAtUserSpecified" value="true"/>
@@ -73,15 +74,16 @@
 <booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.ConnectionCommonData.TargetConnectionLost.promptUserActionOn" value="true"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Protocol Plugin Name" value="HC08 GDI"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Connection Type" value="com.pemicro.mcu.debug.connections.pne.hcs08"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Host App Path" value=""/>
 <stringAttribute key="com.freescale.cdt.debug.cw.core.settings.DebuggerCommonData.Processor Attr Name" value="com.freescale.cdt.debug.cw.CW_SHADOWED_PREF.HC08 Debugger.processor"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.PhysicalConnectionAttributeBase" value="com.pemicro.mcu.debug.connections.pne.hcs08."/>
 <stringAttribute key="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.SimulatorConnectionAttributeBase" value=""/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.core.settings.GdiConnection.Common.logData" value="false"/>
-<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.rseSystemId" value="com.freescale.cdt.debug.cw.core.ui.rse.systemtype.bareboard.hardware.141226003352-0200"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.core.settings.rseSystemId" value="com.freescale.cdt.debug.cw.core.ui.rse.systemtype.bareboard.hardware.150101145719-0200"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.core.settings.wizardSystemNameHint" value="OSBDM"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.debuggerAddress" value="127.0.0.1"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.disableIO" value="false"/>
-<stringAttribute key="com.freescale.cdt.debug.cw.ethCtrl" value="UEC1"/>
+<stringAttribute key="com.freescale.cdt.debug.cw.ethCtrl" value="Ethernet Controller 1"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.executeInitScripts" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.executePerCoresReset" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.executePerprocessorReset" value="false"/>
@@ -93,7 +95,7 @@
 </listAttribute>
 <stringAttribute key="com.freescale.cdt.debug.cw.macAddress" value="**-**-**-**-**-**"/>
 <listAttribute key="com.freescale.cdt.debug.cw.memConfigPathList">
-<listEntry value="${ProjDirPath}/Project_Settings/Debugger/MC9S08SH8.mem"/>
+<listEntry value=""/>
 </listAttribute>
 <stringAttribute key="com.freescale.cdt.debug.cw.netMask" value="255.255.255.255"/>
 <stringAttribute key="com.freescale.cdt.debug.cw.osawareness.osContributorID" value="None"/>
@@ -114,12 +116,13 @@
 </listAttribute>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useMacAddress" value="false"/>
 <listAttribute key="com.freescale.cdt.debug.cw.useMemConfigPathList">
-<listEntry value="true"/>
+<listEntry value="false"/>
 </listAttribute>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useNetworkTransferIO" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useSerialTransferIO" value="false"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useStopTransferIO" value="true"/>
 <booleanAttribute key="com.freescale.cdt.debug.cw.useUDPPort" value="false"/>
+<stringAttribute key="com.freescale.debugger.ka.osek.ORTI_file" value=""/>
 <listAttribute key="com.freescale.panel.list">
 <listEntry value="Debugger Common Settings"/>
 <listEntry value="HC08 Interrupt"/>
@@ -162,7 +165,7 @@
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_CURRENT_ALGORITHM_INDEX" value="0"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_CUSTOM_TRIM" value="1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_DOTRIM" value="1"/>
-<stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_ENABLE_FLASH_PROGRAMMING_DIALOG" value="0"/>
+<stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_ENABLE_FLASH_PROGRAMMING_DIALOG" value="1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_ERASE_PROGRAM_WITHOUT_ASKING" value="0"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_NGS_TRIM_OVERRIDE_REFERENCE_FREQUENCY" value="3600000"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.PEDEBUG_PRESERVE1_ACTIVE" value="0"/>
@@ -181,14 +184,14 @@
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_Multilink_PowerDownDelay" value="250"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_Multilink_PowerUpDelay" value="1000"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_PORT" value="21"/>
-<stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_PORT_NAME_STRING" value="SER01"/>
+<stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_PORT_NAME_STRING" value="PE5515430"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_SPECIFY_IP" value="127.0.0.1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_SPECIFY_IP_ENABLED" value="0"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_SPECIFY_NETWORKCARD" value="127.0.0.1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_SPECIFY_NETWORKCARD_ENABLED" value="0"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_USE_CYCLONEPRO_RELAYS" value="1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.STARTUP_interface_selection" value="1"/>
-<stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.UUID" value="2ed72470-e0d1-4bb3-9251-4a81f43912b8"/>
+<stringAttribute key="com.pemicro.mcu.debug.connections.pne.hcs08.UUID" value="0f90a07b-c60c-4954-972d-ebe6c78e7aae"/>
 <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.hc08.HC08Debugger"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
