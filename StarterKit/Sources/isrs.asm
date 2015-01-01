@@ -1,11 +1,12 @@
 ;************************************************************************
 ;* Símbolos a exportar													*
 ;************************************************************************
-           	XDEF toggle_led, square_wave, uart_echo
-
+			XDEF	systick, sci_receive
+			
 ;************************************************************************
 ;* Símbolos externos usados dentro del módulo							*
 ;************************************************************************
+			XREF	toggle_led, square_wave, uart_echo
 
 ;***********************************************************************
 ;* Inclusión de archivo con definiciones de ports de I/O				*
@@ -15,19 +16,11 @@
 ;************************************************************************
 ;* Definición de constantes (EQU)										*
 ;************************************************************************
-TOGGLE_DELAY:		EQU		500
-LED_PORT:			EQU		PTBD
-LED_PIN:			EQU		PTBD_PTBD4
 
-FLAG_PORT:			EQU		PTBD
-FLAG_PIN:			EQU		PTBD_PTBD3
-		
 ;************************************************************************
 ;* Definición de variables en la página Z								*
 ;************************************************************************
 MY_ZEROPAGE: 	SECTION		SHORT
-
-counter:	DS.B		1
 
 ;************************************************************************
 ;* Definición de variables a partir de la página #1						*
@@ -40,41 +33,26 @@ DEFAULT_RAM:	SECTION
 DEFAULT_ROM:     SECTION	
 
 ;************************************************************************
-;* Función que togglea un LED											*
+;* Función que ejecuta cada 1ms invocada por temporizador del MCU		*
 ;************************************************************************
-toggle_led:
-		LDHX	counter				; Se carga el contador en HX y se incrementa
-		AIX		#1
-		CPHX	#TOGGLE_DELAY
-		BLT		end					; Si aun no se alcanzó #TOGGLE_DELAY, saltar a end, sino continuar
-toggle:
-		LDA		LED_PORT			; Togglear el led
-		EOR		(1 << LED_PIN)
-		STA		LED_PORT
-
-		CLRH						; Limpiar HX (contador)
-		CLRX
-end:
-		STHX		counter			; Guardar el contenido de HX en memoria
-		RTS
+systick:
+		PSHH						; backupear registro H
+		
+		BCLR   TPM1SC_TOF, TPM1SC	; limpiar el Time OverFlow Flag 
+		
+		JSR		toggle_led			; llamo a rutina que togglea LED
+		JSR		square_wave			; llamo a rutina que togglea LED
+		
+		PULH						; recuperar registro H y return from interrupt
+		RTI
 
 ;************************************************************************
-;* Función que togglea un pin para generar una onda cuadrada de f=1khz	*
-;************************************************************************	
-square_wave:
-		LDA		FLAG_PORT			; Togglear pin para generar onda cuadrada de 1 ms
-		EOR		(1 << FLAG_PIN)
-		STA		FLAG_PORT
+;* Función que atiende la interrupción de recepción de UART				*
+;************************************************************************		
+sci_receive:
+		PSHH						; backup de registro H
 
-		RTS
-
-;************************************************************************
-;* Función que lee un dato de la UART y lo escribe, haciendo un "echo"	*
-;************************************************************************	
-uart_echo:
-		BCLR	SCIS1_RDRF, SCIS1
-		LDA	SCID
-wait_ready:
-		BRCLR	SCIS1_TDRE, SCIS1, wait_ready 	
-		STA	SCID
-		RTS
+		JSR	uart_echo				; invocar función echo
+				
+		PULH						; restore de registro H
+		RTI							; return from interrupt

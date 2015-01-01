@@ -37,9 +37,9 @@
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
-#include "utils_asm.h"
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+extern void asm_main(void);
 
 void main(void) {
 	/* Write your local variable definition here */
@@ -49,7 +49,7 @@ void main(void) {
 	/*** End of Processor Expert internal initialization.                    ***/
 
 	/* Write your code here */
-	enable_interrupts();
+	asm_main();
 	
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/
 	/*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
