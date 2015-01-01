@@ -9,3 +9,5 @@ FLASH
 Documentation/
 Generated_Code/
 SaAnalysispointsManager.apconfig
+Sources/Events.h
+Sources/Events.c
