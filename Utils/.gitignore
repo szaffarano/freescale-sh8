@@ -1,0 +1,14 @@
+.cwGeneratedFileSetLog
+ReferencedRSESystems.xml
+SaAnalysispointsManager.apconfig
+StarterKit_FLASH_OSBDM.traceConfig
+FLASH
+.Analysis Data/
+.StarterKit.g_c
+.StarterKit.g_x
+Documentation/
+Generated_Code/
+SaAnalysispointsManager.apconfig
+Sources/Events.h
+Sources/Events.c
+Debug
