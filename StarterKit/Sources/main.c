@@ -37,18 +37,29 @@
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
+#include "queue.h"
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 extern void asm_main(void);
-
 void main(void) {
 	/* Write your local variable definition here */
-
+	volatile byte status;
+	volatile byte value;
+	
 	/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
 	PE_low_level_init();
 	/*** End of Processor Expert internal initialization.                    ***/
 
 	/* Write your code here */
+	value = 0x11;
+	status = queue_push(value);
+	if (status == value + 1) {
+		value = 0x11;
+	}
+	status = queue_pop((byte*)&value);
+	if (status == value + 1) {
+		value = 0x11;
+	}
 	asm_main();
 	
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/

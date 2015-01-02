@@ -32,7 +32,7 @@ DEFAULT_ROM:     SECTION
 ;**********************************************************************
 asm_main:
 		CLI			; habilitar interrupciones
-loop:
+loop:				; blucle infinito
 		NOP
 		BRA	loop
 		RTI

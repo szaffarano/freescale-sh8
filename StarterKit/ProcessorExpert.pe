@@ -3,8 +3,8 @@
   <Header>
     <Name>StarterKit</Name>
     <SavedBy>sebas</SavedBy>
-    <ModificationStamp>42</ModificationStamp>
-    <Date>2015-01-01</Date>
+    <ModificationStamp>48</ModificationStamp>
+    <Date>2015-01-02</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.1.RT6_b1423-0421</PEversion>
   </Header>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>35</ProjectCompNumb>
+    <ProjectCompNumb>41</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -813,8 +813,8 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Index>1</Index>
-        <Value>false</Value>
+        <Index>0</Index>
+        <Value>true</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>DriveStrengthPTB4</ItemSymbol>
@@ -3212,12 +3212,12 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
+        <Value>true</Value>
         <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin2</ItemSymbol>
-        <Value />
+        <Value>PTB2_PIB2_SPSCK_ADP6</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -3232,8 +3232,8 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <TypeSpecNameState>typeOutputInput</TypeSpecNameState>
-        <Index>1</Index>
-        <EnumSymbVal>Input</EnumSymbVal>
+        <Index>0</Index>
+        <EnumSymbVal>Output</EnumSymbVal>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin2InitValue</ItemSymbol>
@@ -3287,7 +3287,7 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <Value>true</Value>
-        <Expanded>true</Expanded>
+        <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin3</ItemSymbol>
@@ -3361,7 +3361,7 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <Value>true</Value>
-        <Expanded>true</Expanded>
+        <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin4</ItemSymbol>
@@ -3434,12 +3434,12 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
+        <Value>true</Value>
         <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin5</ItemSymbol>
-        <Value />
+        <Value>PTB5_TPM1CH1_SS</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -3508,12 +3508,12 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
+        <Value>true</Value>
         <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin6</ItemSymbol>
-        <Value />
+        <Value>PTB6_SDA_XTAL</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -3528,8 +3528,8 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <TypeSpecNameState>typeOutputInput</TypeSpecNameState>
-        <Index>1</Index>
-        <EnumSymbVal>Input</EnumSymbVal>
+        <Index>0</Index>
+        <EnumSymbVal>Output</EnumSymbVal>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin6InitValue</ItemSymbol>
@@ -3582,12 +3582,12 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>false</Value>
+        <Value>true</Value>
         <Expanded>false</Expanded>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin7</ItemSymbol>
-        <Value />
+        <Value>PTB7_SCL_EXTAL</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -3602,8 +3602,8 @@
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
         <TypeSpecNameState>typeOutputInput</TypeSpecNameState>
-        <Index>1</Index>
-        <EnumSymbVal>Input</EnumSymbVal>
+        <Index>0</Index>
+        <EnumSymbVal>Output</EnumSymbVal>
       </ItemState>
       <ItemState>
         <ItemSymbol>Pin7InitValue</ItemSymbol>
